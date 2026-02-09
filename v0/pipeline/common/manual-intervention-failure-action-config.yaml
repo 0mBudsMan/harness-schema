@@ -13,7 +13,7 @@ properties:
       timeout:
         type: string
         minLength: 1
-        pattern: ^[0-9]+(ns|us|ms|s|m|h|d|w)$
+        pattern: ^(([1-9])+\d+[s])|(((([1-9])+\d*[mhwd])+([\s]?\d+[smhwd])*)|(<\+.+>.*)|(^$))$
         description: "Duration string e.g. '10s', '30m', '2h'"
       onTimeout:
         properties:
