@@ -1,0 +1,80 @@
+title: EcsScaleStepInfo
+allOf:
+- $ref: ../../common/step-spec-type.yaml
+- type: object
+  required:
+  - service
+  - instanceUnit
+  - instances
+  properties:
+    connectorRef:
+      type: string
+    region:
+      type: string
+    cluster:
+      type: string
+    service:
+      type: string
+    instanceUnit:
+      type: string
+    instances:
+      oneOf:
+      - type: integer
+        format: int32
+      - type: string
+        pattern: (<\+.+>.*)
+        minLength: 1
+    skipSteadyStateCheck:
+      oneOf:
+      - type: boolean
+      - type: string
+        pattern: (<\+.+>.*)
+        minLength: 1
+    delegateSelectors:
+      oneOf:
+      - type: array
+        items:
+          type: string
+      - type: string
+        pattern: (<\+.+>.*)
+        minLength: 1
+$schema: http://json-schema.org/draft-07/schema#
+type: object
+required:
+- service
+- instanceUnit
+- instances
+properties:
+  connectorRef:
+    type: string
+  region:
+    type: string
+  cluster:
+    type: string
+  service:
+    type: string
+  instanceUnit:
+    type: string
+  instances:
+    oneOf:
+    - type: integer
+      format: int32
+    - type: string
+      pattern: (<\+.+>.*)
+      minLength: 1
+  skipSteadyStateCheck:
+    oneOf:
+    - type: boolean
+    - type: string
+      pattern: (<\+.+>.*)
+      minLength: 1
+  delegateSelectors:
+    oneOf:  
+    - type: array
+      items:
+        type: string
+    - type: string
+      pattern: (<\+.+>.*)
+      minLength: 1
+  description:
+    desc: This is the description for EcsScaleStepInfo

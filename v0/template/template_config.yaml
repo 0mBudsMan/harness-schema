@@ -54,6 +54,7 @@ step_template_types:
   - ../pipeline/steps/cd/ecs-canary-deploy-step-node.yaml
   - ../pipeline/steps/cd/ecs-rolling-deploy-step-node.yaml
   - ../pipeline/steps/cd/ecs-rolling-rollback-step-node.yaml
+  - ../pipeline/steps/cd/ecs-scale-step-node.yaml
   - ../pipeline/steps/cd/ecs-run-task-step-node.yaml
   - ../pipeline/steps/cd/ecs-upgrade-container-step-node.yaml
   - ../pipeline/steps/cd/ecs-service-setup-step-node.yaml
@@ -229,6 +230,7 @@ step_template_types:
   - ../pipeline/steps/custom/fme-flag-create-step-node.yaml
   - ../pipeline/steps/custom/fme-segment-create-step-node.yaml
   - ../pipeline/steps/custom/fme-segment-update-step-node.yaml
+  - ../pipeline/steps/custom/fme-segment-delete-step-node.yaml
   - ../pipeline/steps/custom/fme-flag-delete-step-node.yaml
   - ../pipeline/steps/custom/fme-flag-archive-step-node.yaml
   - ../pipeline/steps/custom/fme-flag-limit-exposure-step-node.yaml
@@ -243,6 +245,9 @@ step_template_types:
   - ../pipeline/steps/custom/fme-flag-set-targeting-rules-step-node.yaml
   - ../pipeline/steps/custom/fme-flag-set-treatments-step-node.yaml
   - ../pipeline/steps/custom/fme-flag-patch-definition-step-node.yaml
+  - ../pipeline/steps/custom/fme-flagset-create-step-node.yaml
+  - ../pipeline/steps/custom/fme-flagset-delete-step-node.yaml
+  - ../pipeline/steps/custom/fme-flagset-add-remove-flags-step-node.yaml
   - ../pipeline/steps/cvng/cv-analyze-deployment-step-node.yaml
   - ../pipeline/steps/cvng/cv-verify-step-node.yaml
   - ../pipeline/steps/iacm/iacmapproval-step-node.yaml
@@ -265,6 +270,7 @@ step_template_types:
   - ../pipeline/steps/common/slsa-verification-step-node.yaml
   - ../pipeline/steps/cd/k8s-traffic-routing-step-node.yaml
   - ../pipeline/steps/cd/download-aws-s3-step-node.yaml
+  - ../pipeline/steps/cd/download-gcs-step-node.yaml
   - ../pipeline/steps/cd/download-harness-store-step-node.yaml
   - ../pipeline/steps/common/wiz-scan-node.yaml
   - ../pipeline/steps/common/modelscan-scan-node.yaml
